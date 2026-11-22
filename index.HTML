@@ -1,0 +1,91 @@
+```html
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GTA Pará RP Mobile</title>
+<style>
+body {
+  margin: 0;
+  background: #172b24;
+  color: white;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+header {
+  background: #087b48;
+  padding: 18px;
+}
+h1 { font-size: 25px; }
+.cenario {
+  margin: 20px;
+  padding: 35px 10px;
+  background: linear-gradient(#65b7d5 45%, #56834a 45%);
+  border-radius: 15px;
+  min-height: 160px;
+}
+.personagem { font-size: 65px; }
+button {
+  background: #07864d;
+  color: white;
+  border: 0;
+  border-radius: 10px;
+  padding: 15px;
+  margin: 5px;
+  font-size: 17px;
+}
+.info {
+  background: #263d32;
+  margin: 15px;
+  padding: 15px;
+  border-radius: 12px;
+}
+</style>
+</head>
+<body>
+<header>
+<h1>GTA PARÁ RP MOBILE</h1>
+<p>Bem-vindo a Belém do Pará!</p>
+</header>
+
+<div class="info">
+💵 Dinheiro: R$ <span id="dinheiro">500</span>
+</div>
+
+<div class="cenario">
+<h2 id="local">📍 Ver-o-Peso</h2>
+<div class="personagem">🧍</div>
+<p>Explore a cidade!</p>
+</div>
+
+<h3>Movimentação</h3>
+<button onclick="andar('frente')">⬆️ Andar</button>
+<button onclick="andar('esquerda')">⬅️ Esquerda</button>
+<button onclick="andar('direita')">➡️ Direita</button>
+<button onclick="andar('correr')">🏃 Correr</button>
+
+<h3>Locais de Belém</h3>
+<button onclick="ir('Ver-o-Peso')">Ver-o-Peso</button>
+<button onclick="ir('Estação das Docas')">Estação das Docas</button>
+<button onclick="ir('Praça da República')">Praça da República</button>
+
+<div class="info" id="mensagem">
+Você está pronto para explorar!
+</div>
+
+<script>
+function andar(direcao) {
+ document.getElementById("mensagem").innerText =
+ "Você está se movimentando: " + direcao + "!";
+}
+function ir(local) {
+ document.getElementById("local").innerText = "📍 " + local;
+ document.getElementById("mensagem").innerText =
+ "Você chegou a " + local + "!";
+}
+</script>
+</body>
+</html>
+```
